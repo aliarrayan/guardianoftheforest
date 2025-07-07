@@ -28,8 +28,8 @@ const Testimonials = () => {
 
     return (
         <div className='testimonials'>
-            <img src={next_icon} alt="" className='next-btn' onClick={slideForward} />
-            <img src={back_icon} alt="" className='back-btn' onClick={slideBackward} />
+            <img src={back_icon} alt="Back" className='nav-icon back-btn' onClick={slideBackward} />
+            <img src={next_icon} alt="Next" className='nav-icon next-btn' onClick={slideForward} />
             <div className='slider'>
                 <ul ref={slider}>
                     <li>

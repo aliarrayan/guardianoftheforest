@@ -1,67 +1,79 @@
-.testimonials{
+.testimonials {
     margin: 80px auto;
     padding: 0 80px;
     position: relative;
+    max-width: 1000px;
 }
 
-.next-btn, .back-btn{
+.next-btn, .back-btn {
     position: absolute;
     top: 50%;
-    right: 0;
-    transform: translateX(-50%);
-    padding: 15px;
-    width: 50px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
-    background: #212EA0;
+    background-color: #212EA0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 2;
 }
 
-.back-btn{
-    right: auto;
-    left: 0;
+.next-btn {
+    right: 10px;
 }
 
-.slider{
+.back-btn {
+    left: 10px;
+}
+
+.slider {
     overflow: hidden;
 }
 
-.slider ul{
+.slider ul {
     display: flex;
-    width: 200%;
-    overflow-x: hidden;
-    transition: 0.5s;
+    width: 400%;
+    transition: transform 0.5s ease;
+    padding: 0;
+    margin: 0;
 }
 
-.slider ul li{
+.slider ul li {
     list-style: none;
-    width: 50%;
+    width: 25%;
     padding: 20px;
+    box-sizing: border-box;
 }
 
-.slide{
+.slide {
     box-shadow: 0 0 20px rgba(0,0,0,0.05);
     padding: 40px;
     border-radius: 10px;
     color: #676767;
     line-height: 1.4;
+    background: white;
 }
 
-.slide img{
+.slide img {
     width: 65px;
     border-radius: 50%;
     margin-right: 10px;
     border: 4px solid #212EA0;
 }
 
-.user-info{
+.user-info {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     font-size: 15px;
 }
 
-.user-info h3{
+.user-info h3 {
     color: #212EA0;
+    margin: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -72,4 +84,10 @@
     .slider ul {
         width: 400%;
     }
+
+    .next-btn, .back-btn {
+        top: auto;
+        bottom: -50px;
+    }
 }
+
