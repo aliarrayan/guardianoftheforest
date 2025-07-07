@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://aliarrayan.github.io/guardianfoftheorest",
+  "homepage": "https://aliarrayan.github.io/guardianoftheforest",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
