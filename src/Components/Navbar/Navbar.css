@@ -1,0 +1,143 @@
+/* --- BASE NAVBAR STYLING --- */
+nav {
+    width: 100%;
+    color: #fff;
+    padding: 4px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    background: transparent;
+}
+
+.logo {
+    width: 180px;
+    margin-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn {
+    background: #FFF;
+    color: #212121;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #eee;
+}
+
+.dark-nav {
+    background: #212EA0;
+    transition: 0.5s;
+}
+
+/* --- RESPONSIVE FOR MOBILE & TABLET --- */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin: 10px 0 0 0;
+        display: none; /* hidden by default on mobile */
+    }
+
+    nav ul.active {
+        display: flex; /* shown when menu is toggled */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: #fff;
+        cursor: pointer;
+        margin-left: auto;
+    }
+}
+
+/* Tombol menu default: hidden */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 1001;
+}
+
+/* Ubah posisi dan tampilan menu nav ul */
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #212EA0;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+}
+
